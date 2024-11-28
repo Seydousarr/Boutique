@@ -1,0 +1,104 @@
+/* Card.css */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    width: 320px;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card h2 {
+    font-size: 1.7em;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.card:hover h2 {
+    color: #f5a623;
+}
+
+.card-price {
+    font-weight: bold;
+    color: #2c7cba;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.card-description {
+    font-size: 1em;
+    color: #777;
+    margin: 10px 0;
+    line-height: 1.4;
+}
+
+.card-qte {
+    font-size: 0.9em;
+    margin-top: 15px;
+    color: #4d4d4d;
+}
+
+button {
+    background-color: #2c7cba;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #1a5a8e;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #155b84;
+}
+
+/* Add animation for card load */
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: cardAppear 0.5s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        margin: 10px auto;
+    }
+}

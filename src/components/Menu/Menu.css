@@ -1,0 +1,115 @@
+/* Menu.css */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.menu:hover {
+    background-color: #444;
+}
+
+.menu-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-img {
+    width: 100px;
+    height: auto;
+
+  }
+
+.menu-items {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    transition: transform 0.3s ease;
+}
+
+.menu-items li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu-items li a:hover {
+    background-color: #f5a623;
+    color: #333;
+    transform: scale(1.1);
+}
+
+.menu-search input {
+    padding: 7px;
+    border: 2px solid #31e421;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.menu-search input:focus {
+    background-color: #555;
+    outline: none;
+    border-color: #e26613;
+}
+
+/* Animations for menu items */
+.menu-items li {
+    opacity: 0;
+    animation: slideIn 0.5s forwards;
+}
+
+.menu-items li:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.menu-items li:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.menu-items li:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+/* Slide-in effect for menu items */
+@keyframes slideIn {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .menu-items {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .menu-items li a {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        border: 1px solid #f5a623;
+    }
+}
